@@ -1,11 +1,16 @@
 <h2>Products</h2>
 
-<input [(ngModel)]="searchString" (keyup)="filterProducts()"> <br> <br>
-<!-- <h3>{{searchString}}</h3> -->
 
-<button (click)="toggleImage()">Show Image</button> <br> <br>
 
-<ng-container>
+<div id="addproduct">
+    <pm-create-product (addProductEvent)="onAddNewProduct($event)"></pm-create-product>
+</div>
+
+<div id="products">
+    <input type="text" placeholder="Search . . ." [(ngModel)]="searchString" (keyup)="filterProducts()"> <br>
+    <!-- <h3>{{searchString}}</h3> -->
+    
+    <button (click)="toggleImage()">Show Image</button> <br>
     <table id="products" *ngIf="newProducts && newProducts.length; else noProducts">
         <thead>
             <tr>
@@ -28,12 +33,8 @@
             </tr>
         </tbody>
     </table>
-</ng-container>
+</div>
 
 <ng-template #noProducts>
     No products available.
 </ng-template> 
-
-<ng-container>
-    <pm-create-product (addProductEvent)="onAddNewProduct($event)"></pm-create-product>
-</ng-container>

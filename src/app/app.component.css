@@ -1,3 +1,13 @@
+* {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+}
+
 .nav-link {
   font-size: large;
 }

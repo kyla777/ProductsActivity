@@ -3,12 +3,8 @@ import { FormsModule } from '@angular/forms';
 
 @Component ({
   selector: 'pm-root',
-  templateUrl: './app.component.html'
-  // `
-  // <div><h1>{{title}}</h1></div>
-  // <something-component></something-component>
-  // <nothing-component></nothing-component>
-  // `
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {

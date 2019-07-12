@@ -1,14 +1,59 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
+#addproduct {
+    width: 23%;
+    float: left;
+}
+
+#products {
+    width: 75%;
+    float: right;
 }
 
 table {
-    border: 1px solid #000000;
-    width: 75%;
-    float: left;
+    width: 100%;
+    border-collapse: collapse;
+    float: right;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
 }
 
 img {
     width: 25%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 2%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
 }
