@@ -1,0 +1,14 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+table {
+    border: 1px solid #000000;
+    width: 75%;
+    float: left;
+}
+
+img {
+    width: 25%;
+}

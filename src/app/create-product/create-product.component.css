@@ -1,0 +1,15 @@
+#create-product {
+    float: right;
+    text-align: left;
+    width: 23%;
+    margin-left: 1%;
+    border-left: 1px solid black;
+}
+
+label, button, h4 {
+    margin-left: 10px;
+}
+
+label {
+    padding: 10px;
+}

@@ -1,0 +1,39 @@
+<h2>Products</h2>
+
+<input [(ngModel)]="searchString" (keyup)="filterProducts()"> <br> <br>
+<!-- <h3>{{searchString}}</h3> -->
+
+<button (click)="toggleImage()">Show Image</button> <br> <br>
+
+<ng-container>
+    <table id="products" *ngIf="newProducts && newProducts.length; else noProducts">
+        <thead>
+            <tr>
+                <th *ngIf="isVisible">Product Image</th>
+                <th>Product Name</th>
+                <th>Product Code</th>
+                <th>Product Price</th>
+                <th>Product Release Date</th>
+                <th>Product Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row" *ngFor="let product of newProducts">
+                <img *ngIf="isVisible" [src] = "product.imageUrl">
+                <td>{{product.productName}}</td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.price | currency: 'PhP ': 'symbol': '1.2-2'}}</td>
+                <td>{{product.releaseDate}}</td>
+                <td>{{product.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+
+<ng-template #noProducts>
+    No products available.
+</ng-template> 
+
+<ng-container>
+    <pm-create-product (addProductEvent)="onAddNewProduct($event)"></pm-create-product>
+</ng-container>
