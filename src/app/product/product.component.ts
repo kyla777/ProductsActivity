@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProduct } from '../models/product';
 
 @Component ({
     selector: "pm-product",
@@ -22,7 +23,7 @@ export class ProductComponent {
     // @Input() starRating: number;
     // @Input() imageUrl: string;
 
-    products: Product[] = [
+    products: IProduct[] = [
         {
           "productId": 1,
           "productName": "Leaf Rake",
@@ -82,13 +83,13 @@ export class ProductComponent {
         this.isVisible = !this.isVisible;
     }
 
-    onAddNewProduct(newProduct: Product) {
+    onAddNewProduct(newProduct: IProduct) {
       console.log(newProduct);
       this.products.push(newProduct);
       this.newProducts = this.products;
     }
 
-    newProducts: Product[] = this.products;
+    newProducts: IProduct[] = this.products;
     filterProducts() {
         if(this.searchString != "") {
             this.newProducts = [];
@@ -105,15 +106,4 @@ export class ProductComponent {
         }
     }
     
-}
-
-interface Product {
-    productId: number,
-    productName: string,
-    productCode: string,
-    releaseDate: string,
-    description: string,
-    price: number,
-    starRating: number,
-    imageUrl: string
 }

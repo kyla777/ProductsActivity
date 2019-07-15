@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { IProduct } from '../models/product';
 
 @Component({
   selector: 'pm-create-product',
